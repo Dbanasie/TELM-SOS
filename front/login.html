@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>SOS</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <main>
+        <div class="valign-wrapper row">
+            <div class="col card hoverable s10 pull-s1 m8 pull-m2 l8 pull-l2" style="padding:20px; margin-top: 30px;">
+                <div class="valign-wrapper" style="justify-content: center;">
+                    <div class="my-container">
+                        <div class="col s12  m12 l12">
+                            <h4 class="center">Logowanie na konto administratora</h4>
+                        </div>
+                        <div class="input-field col s12 ">
+                            <i class="material-icons prefix">https</i>
+                            <input type="password" id="password" name="password" class="validate" required="true" aria-required="true" minlength="4">
+
+                            <span class="helper-text" data-error="Hasło jest za krótkie"></span>
+                        </div>
+                        <button class="waves-effect waves-light btn center-align col s10 m8 offset-s1 push-m2 l8 push-l2 waves-light red" onclick="login()">Zaloguj</button>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/loginScript.js"></script>
+</body>
+
+</html>
