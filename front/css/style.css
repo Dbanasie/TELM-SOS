@@ -81,6 +81,13 @@ header {
     padding: 10px;
 }
 
+.navline {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-bottom-color: #D50000;
+    BORDER-TOP-COLOR: #D50000;
+}
+
 .upper-nav-title {
     font-size: 22px;
     font-weight: 600;
