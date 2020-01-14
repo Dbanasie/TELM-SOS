@@ -1,0 +1,8 @@
+create table Users(phone INTEGER PRIMARY KEY, name TEXT, surname TEXT, pesel varchar(11), date_of_birth TEXT);
+create table Calls(date integer, phone integer, lat varchar(15), lng varchar(15), primary key(date,phone));
+sqlite> insert into Users values (123456789, 'Iga','Banasiewicz', 00032413509, '24.03.2000');
+sqlite> insert into Users values (513196568, 'Dominika','Banasiewicz', 95031013509, '10.03.1995');
+sqlite> insert into Users values (987654321, 'Jan','Kowalski', 77041113509, '11.04.1977');
+sqlite> insert into Calls values (1578943987401, 513196568,'52.222860','20.986347');
+sqlite> insert into Calls values (1578944134232, 123456789,'52.184934','21.187545');
+sqlite> insert into Calls values (1578944551297, 987654321,'52.225210','21.017171');

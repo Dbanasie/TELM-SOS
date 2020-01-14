@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>System rejestracji zgłoszeń SOS</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="admin.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <div>
+                <img src="../images/ambulance.jpg" alt="logo" />
+            </div>
+        </li>
+
+        <li id="info" class="active">
+            <a href="index.html" class="waves-effect sidenav-close">
+                Wezwania SOS
+            </a>
+        </li>
+        <li id="login">
+            <a href="../usersBase/usersbase.html" class="waves-effect sidenav-close">
+                Baza użytkowników
+            </a>
+        </li>
+        <li id="login">
+            <a href="../addUser/adduser.html" class="waves-effect sidenav-close">
+                Dodaj użytkownika
+            </a>
+        </li>
+        <li id="logout">
+            <a href="../index.html" class="waves-effect sidenav-close">
+                Zakończ sesje
+            </a>
+        </li>
+
+    </ul>
+    <main class="main">
+        <div class="upper-nav">
+            <div class="upper-nav-title">SOS - Admin</div>
+        </div>
+        <div class="call-list-container">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data zgłoszenia</th>
+                            <th>Nr Telefonu</th>
+                            <th>Dlugość geo</th>
+                            <th>Szerokość geo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                        <tr>
+                            <td>12-03-2019</td>
+                            <td>666 666 666</td>
+                            <td>51'12"33</td>
+                            <td>54'22"99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="map-wrapper">
+                <div class="map" id="map"></div>
+            </div>
+        </div>
+        <div>
+            <button>Kocham Cię</button>
+        </div>
+        <script src="callslist.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9u3-ebE5WwEGD81pc2fGuRlAZkKWjWmw&callback=initMap">
+        </script>
+    </main>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/adminIndexScript.js"></script>
+</body>
+
+</html>

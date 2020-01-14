@@ -8,9 +8,13 @@
  * Made By MaterializeCSS.com
  */
 
-.container {
+.my-container {
     display: flex;
     flex-direction: column;
+}
+
+.sidenav {
+    width: 200px;
 }
 
 .icon-block {
@@ -44,7 +48,7 @@ body {
 header,
 main,
 footer {
-    padding-left: 300px;
+    padding-left: 200px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -71,4 +75,14 @@ header {
 
 .promo {
     width: 100%;
+}
+
+.upper-nav {
+    padding: 10px;
+}
+
+.upper-nav-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
 }
