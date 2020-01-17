@@ -12,23 +12,29 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
+
 <body>
     <ul id="slide-out" class="sidenav sidenav-fixed">
         <li>
-            <div class="user-view" style=' height: 200px;'>
-                <div class="background ">
-                    <img src="images/ambulance.jpg" alt="logo" img style=' margin: 0px 0px; width: 100%;'>
-                </div>
+            <div>
+                <img src="images/ambulance.jpg" alt="logo">
+            </div>
             </div>
         </li>
 
-        <li id="info"><a href="index.html">Informacje</a>
+        <li id="info">
+            <a href="index.html">Informacje</a>
         </li>
-        <li id="login" class="active"><a href="login.html">Administrator</a>
+        <li id="login" class="active">
+            <a href="login.html">Administrator</a>
         </li>
     </ul>
 
-    <main>
+    <main class="main">
+        <div class="upper-nav navline">
+            <div class="upper-nav-title">SOS - Admin</div>
+        </div>
+
         <div class="valign-wrapper row">
             <div class="col card hoverable s10 pull-s1 m8 pull-m2 l8 pull-l2" style="padding:20px; margin-top: 30px;">
                 <div class="valign-wrapper" style="justify-content: center;">
@@ -44,7 +50,7 @@
                         </div>
 
 
-                        <a href="adminPanel/index.html" class="waves-effect sidenav-close">
+                        <a href="callsList/callslist.html" class="waves-effect sidenav-close">
                             <button class="waves-effect waves-light btn center-align col s10 m8 offset-s1 push-m2 l8 push-l2 waves-light red" onclick="login()">Zaloguj</button>
                         </a>
                     </div>
