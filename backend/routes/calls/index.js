@@ -1,12 +1,17 @@
 const Router = require("koa-router");
 const router = new Router();
+const db = require("../utils/db");
 
-const EmergencyCalls = []; //
+//
 //const AcceptedParams = ['lat', 'long', 'id'];
+const EmergencyCalls = db.prepare('SELECT * FROM Calls order by date desc');
+
 
 router.get("/calls", ctx => {
 
-    ctx.body = EmergencyCalls;
+
+    ctx.body = EmergencyCalls.all();
+    console.log("Wywolalo sie wpakowanie zgloszen");
 });
 
 router.post("/emergency-call", ctx => {
