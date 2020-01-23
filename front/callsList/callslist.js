@@ -1,4 +1,7 @@
 // Initialize and add the map
+var map;
+var setMarker = () => console.log('za wczesnie');
+
 function initMap() {
     //call location
     var warsaw = {
@@ -6,7 +9,7 @@ function initMap() {
         lng: 21.005984
     };
     // The map, centered at call location
-    var map = new google.maps.Map(
+    map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 10,
             center: warsaw
@@ -16,14 +19,25 @@ function initMap() {
         position: uluru,
         map: map
     });*/
-};
+    setMarker = () => {
+        var marker = new google.maps.marker({
+            position: point
+        })
 
-function showPosition(lat, lng) {
-    var point = { lat, lan };
-    var marker = new google.maps.marker({
-        position: point,
-        map: map
+        marker.setMap(map);
+    }
+};
+var point = {
+    lat: 52.231884,
+    lng: 21.005984
+}
+
+function showPosition(point) {
+    var marker = new google.maps.Marker({
+        position: point
     })
+
+    marker.setMap(map);
 
 };
 
@@ -50,4 +64,22 @@ const getData = () => {
         });
 
 }
+
+const showPatient(PatientID) => {
+    fetch('http:localhost:8888/patient?PatientID')
+        .then(resp => resp.json())
+        .then(data => {
+
+
+        })
+
+
+
+
+}
+
 getData();
+setTimeout(() => {
+    setMarker(point);
+
+}, 3000);
