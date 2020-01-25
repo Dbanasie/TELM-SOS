@@ -50,14 +50,17 @@ const getData = () => {
 
             data.forEach(call => {
                 row = document.createElement("tr");
-                row.setAttribute('id', `${call.phone}`);
+                row.setAttribute('data-id', `${call.phone}`);
 
-                row.innerHTML = `
-            <td>${call.date}</td>
-            <td>${call.phone}</td>
-            <td>${call.lat}</td>
-            <td>${call.lng}</td>
-        `;
+                var date = new Date(call.date).toString().slice(0, 25);
+
+                row.innerHTML =
+                    `
+                        <td>${date}</td>
+                        <td>${call.phone}</td>
+                        <td>${call.lat}</td>
+                        <td>${call.lng}</td>
+                    `;
                 //tu dodajemy wiersz z pacjentem
                 tableBody.appendChild(row);
             })
@@ -65,21 +68,15 @@ const getData = () => {
 
 }
 
-const showPatient(PatientID) => {
-    fetch('http:localhost:8888/patient?PatientID')
+jQuery(document).on('click', '#calls-table tr', evt => {
+    const phone = jQuery(evt.currentTarget).data().id;
+    // console.log(jQuery(evt.currentTarget).data());
+    //console.log(phone);
+    fetch(`http:localhost:8888/user?dupaMarysi=${phone}`)
         .then(resp => resp.json())
         .then(data => {
-
-
+            alert('Zgłoszenie od użytkownika:\n' + data.name + ' ' + data.surname + '\n' + 'PESEL: ' + data.pesel + '\nData urodzenia: ' + data.date_of_birth);
         })
-
-
-
-
-}
+});
 
 getData();
-setTimeout(() => {
-    setMarker(point);
-
-}, 3000);
