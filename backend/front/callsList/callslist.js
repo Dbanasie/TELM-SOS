@@ -43,7 +43,7 @@ function showPosition(point) {
 
 
 const getData = () => {
-    fetch(`http:localhost:8888/calls`)
+    fetch(`http://localhost:8888/calls`)
         .then(resp => resp.json())
         .then(data => {
             const tableBody = document.getElementById('calls-table')
@@ -72,7 +72,7 @@ jQuery(document).on('click', '#calls-table tr', evt => {
     const phone = jQuery(evt.currentTarget).data().id;
     // console.log(jQuery(evt.currentTarget).data());
     //console.log(phone);
-    fetch(`http:localhost:8888/user?dupaMarysi=${phone}`)
+    fetch(`http://localhost:8888/user?dupaMarysi=${phone}`)
         .then(resp => resp.json())
         .then(data => {
             alert('Zgłoszenie od użytkownika:\n' + data.name + ' ' + data.surname + '\n' + 'PESEL: ' + data.pesel + '\nData urodzenia: ' + data.date_of_birth);

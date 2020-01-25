@@ -1,5 +1,5 @@
 const getData = () => {
-    fetch(`http:localhost:8888/users`)
+    fetch(`http://localhost:8888/users`)
         .then(resp => resp.json())
         .then(data => {
             const tableBody = document.getElementById('users-table')
