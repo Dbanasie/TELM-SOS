@@ -30,7 +30,7 @@ router.post("/emergency-call", ctx => {
     Call.long = params.long;
     Call.id = params.id;
     Call.date = new Date();
-    EmergencyCalls.push(Call);
+    // EmergencyCalls.push(Call);
 
     ctx.body = { status: true };
 });

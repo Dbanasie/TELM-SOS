@@ -11,6 +11,7 @@
     <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="addUser.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -49,15 +50,15 @@
 
         </div>
 
-        <div class="form">
-            <input id="name" nevline> Imię </input>
-            <input id="surname"> Nazwisko </input>
-            <input id="PESEL"> PESEL </input>
-            <input id="phone"> Numer telefonu </input>
-        </div>
-        <!-- Przycisk WYŚLIJ -->
-        <button class="button"> Wyślij </button>
-        </div>
+        <form id="add-user-from" class="form">
+            <input type="text" id="name" name="name" nevline> Imię </input>
+            <input id="surname" name="surname"> Nazwisko </input>
+            <input id="PESEL" name="PESEL"> PESEL </input>
+            <input id="phone" name="phone"> Numer telefonu </input>
+            </div>
+            <!-- Przycisk WYŚLIJ -->
+            <button type="submit" class="button" id="send"> Wyślij </button>
+            </div>
         </form>
     </main>
 
